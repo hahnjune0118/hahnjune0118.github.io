@@ -1,11 +1,13 @@
 ## A Space dedicated for Learning
 
 Hi there! 
+
 I am HahnJune Yeon and this is my Github page!
+
 Hope you enjoy!
 
 These are some of my latest works!
-- https://hahnjune0118.github.io/regression.html
+- (https://hahnjune0118.github.io/regression.html)
 
 
 ### Markdown
