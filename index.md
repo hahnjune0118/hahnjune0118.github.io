@@ -8,7 +8,7 @@ Hope you enjoy!
 
 These are some of my latest works!
 
-[Regression on House Price in Seoul](https://hahnjune0118.github.io/regression.html)
+- [Regression on House Price in Seoul](https://hahnjune0118.github.io/regression.html)
 
 
 ### Linkedin
