@@ -1,8 +1,12 @@
 ## A Space dedicated for Learning
 
-You can use the [editor on GitHub](https://github.com/hahnjune0118/hahnjune0118.github.io/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
+Hi there! 
+I am HahnJune Yeon and this is my Github page!
+Hope you enjoy!
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+These are some of my latest works!
+- https://hahnjune0118.github.io/regression.html
+
 
 ### Markdown
 
