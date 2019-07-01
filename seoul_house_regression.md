@@ -18,7 +18,7 @@
 개발환경(IDE)으로는 R-Studio(https://www.rstudio.com/)를 이용했습니다.
 
 부동산 데이터는 문재인 정부가 출범한 2017년 5월 이후 **2017년 6월 16일**부터 **2019년 6월 14일**까지 2년간의 서울시 아파트 매매 가격을 사용했습니다. 
-부동산 데이터는 `국토교통부 실거래가 공개시스템`(http://rtdown.molit.go.kr/)을 활용했습니다.
+부동산 데이터는 `국토교통부 실거래가 공개시스템`(http://rtdown.molit.go.kr) 을 활용했습니다.
 
 ### Initial Package Settings
 ```markdown
@@ -100,7 +100,30 @@ houseData = data.frame(ymd_date, si, gu, dong, bunji, danji,
                        floor, const_year, livingArea_KR, price100)
 ```
 
+### Speculation Labelling
+문재인 정부 출범(2017년 5월 이후) 첫 대규모 부동산 대책인 **8.2 부동산 대책** [(국토교통부 보도자료)](http://www.molit.go.kr/USR/NEWS/m_71/dtl.jsp?id=95079498) 의 핵심인 `투기지역` 과 `투기과열지구` 지정에 따른 서울시 아파트 매매가격의 변화 및 차이를 분석했습니다.
 
+```markdown
+## 서울시 전역이 투기과열지구로 지정
+## 투기지역은 전체 25개 구 중 해당 11개에 해당
+spec<-ifelse(houseData$gu=='강남구'|houseData$gu=='서초구'|houseData$gu=='송파구'
+                       |houseData$gu=='강동구'|houseData$gu=='용산구'|houseData$gu=='성동구'
+                       |houseData$gu=='노원구'|houseData$gu=='마포구'|houseData$gu=='양천구'
+                       |houseData$gu=='영등포구'|houseData$gu=='강서구',1,0)
+## 기존의 data.frame에 투기지역 선정 여부 변수(더미변수) 추가
+houseData = data.frame(ymd_date, si, gu, dong, bunji, danji, 
+                       floor, const_year, livingArea_KR, price100, spec)
+## data.frame의 구조 열람
+str(houseData)
+```
+투기지역(==1)과 투기조정지역(==0)의 아파트 매매가격 차이
+```markdown
+install.packages('ggpubr', repos = "https://cran.r-project.org/")
+library(ggpubr)
+ggboxplot(houseData, x='spec', y='price100',
+          color='spec', palette = c("#00AFBB", "#FC4E07"),
+          xlab='Speculation', ylab='Price')
+```
 
 
 
