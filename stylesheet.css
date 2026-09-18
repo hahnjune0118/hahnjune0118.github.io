@@ -1,0 +1,127 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+
+  background: #ffffff;
+  color: #222222;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  line-height: 1.55;
+}
+
+.container {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 55px 30px 70px 30px;
+}
+
+h1 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 34px;
+  font-weight: 500;
+  margin: 0 0 22px 0;
+}
+
+h2 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 22px;
+  font-weight: 500;
+
+  margin-top: 46px;
+  margin-bottom: 20px;
+
+  border-bottom: 1px solid #dddddd;
+  padding-bottom: 6px;
+}
+
+h3 {
+  font-size: 16px;
+  margin: 0 0 7px 0;
+}
+
+p {
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+a {
+  color: #1772d0;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.intro {
+  margin-bottom: 35px;
+}
+
+.intro-text {
+  max-width: 720px;
+}
+
+.links {
+  margin-top: 18px;
+}
+
+.entry {
+  margin-bottom: 24px;
+}
+
+.entry-title {
+  font-weight: 700;
+}
+
+.entry-meta {
+  color: #666666;
+  margin-top: 2px;
+}
+
+.project {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 30px;
+  align-items: flex-start;
+}
+
+.project-text {
+  flex: 1;
+}
+
+.project-links {
+  margin-top: 8px;
+}
+
+footer {
+  border-top: 1px solid #eeeeee;
+  margin-top: 55px;
+  padding-top: 15px;
+
+  color: #888888;
+  font-size: 12px;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 650px) {
+
+  .container {
+    padding: 30px 20px 50px 20px;
+  }
+
+  h1 {
+    font-size: 29px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+}
